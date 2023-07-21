@@ -12,7 +12,7 @@ This repository is the reference code for our paper 'Multi-View Vertebra Localiz
 This repository is based on PyTorch 1.12.1 + Plastimatch 1.9.4.
 
 ### Installation
-For installation of the Plastimatch, you can refer to [Plastimatch]([Title](https://plastimatch.org/)).
+For installation of the Plastimatch, you can refer to [Plastimatch](https://plastimatch.org/).
 
 ### Training WorkFlow
 1. Preprocess the data
