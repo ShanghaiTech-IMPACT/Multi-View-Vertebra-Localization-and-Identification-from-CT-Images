@@ -1,7 +1,7 @@
 # Multi-View Vertebra Localization and Identification from CT Images
  by [Han Wu](http://hanwu.website/), Jiadong Zhang, [Yu Fang](https://yuffish.github.io/), Zhentao Liu, Nizhuan Wang, [Zhiming Cui](https://erdanc.github.io/) and [Dinggang Shen](http://idea.bme.shanghaitech.edu.cn/home/people/faculty).
  
-arXiv paper link: [[paper]](https://arxiv.org/abs/2307.12845)
+arXiv paper link: [https://arxiv.org/abs/2307.12845](https://arxiv.org/abs/2307.12845)
 ## Introduction
 This repository is the reference code for our paper 'Multi-View Vertebra Localization and Identification from CT Images' in MICCAI 2023.
  ![Overall Pipeline](./asset/pipeline.png)
