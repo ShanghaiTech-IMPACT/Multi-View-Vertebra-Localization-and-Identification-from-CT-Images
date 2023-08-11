@@ -42,7 +42,6 @@ preprocess/preprocess.py
 2. DRR Generation
 ```c
 preprocess/generate_drr.py
-preprocess/generate_drr_heatmap.py
 ```
 3. Single-View Localization & Identification
 4. Multi-View Fusion
