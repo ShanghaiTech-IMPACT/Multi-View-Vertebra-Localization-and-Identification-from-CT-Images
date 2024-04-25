@@ -1,5 +1,5 @@
 # Multi-View Vertebra Localization and Identification from CT Images
- by [Han Wu](http://hanwu.website/), Jiadong Zhang, [Yu Fang](https://yuffish.github.io/), Zhentao Liu, Nizhuan Wang, [Zhiming Cui](https://erdanc.github.io/) and [Dinggang Shen](http://idea.bme.shanghaitech.edu.cn/home/people/faculty).
+ by [Han Wu](http://hanwu.website/), Jiadong Zhang, [Yu Fang](https://yuffish.github.io/), Zhentao Liu, Nizhuan Wang, [Zhiming Cui](https://shanghaitech-impact.github.io/) and [Dinggang Shen](http://idea.bme.shanghaitech.edu.cn/home/people/faculty).
  
 arXiv paper link: [https://arxiv.org/abs/2307.12845](https://arxiv.org/abs/2307.12845)
 ## Introduction
@@ -59,10 +59,12 @@ Public dataset:
 
 ## Citation
 ```c
-@article{wu2023multiviewvert,
-  title={Multi-View Vertebra Localization and Identification from CT Images},
-  author={Han Wu, Jiadong Zhang, Yu Fang, Zhentao Liu, Nizhuan Wang, Zhiming Cui and Dinggang Shen},
-  journal={International Conference on Medical Image Computing and Computer Assisted Intervention},
-  year={2023}
-}  
+@inproceedings{wu2023multi,
+  title={Multi-view Vertebra Localization and Identification from CT Images},
+  author={Wu, Han and Zhang, Jiadong and Fang, Yu and Liu, Zhentao and Wang, Nizhuan and Cui, Zhiming and Shen, Dinggang},
+  booktitle={International Conference on Medical Image Computing and Computer-Assisted Intervention},
+  pages={136--145},
+  year={2023},
+  organization={Springer}
+}
 ```
