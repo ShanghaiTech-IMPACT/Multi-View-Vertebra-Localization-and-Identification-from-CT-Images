@@ -206,3 +206,45 @@ def centroids_reorient(ctd_list, img, decimals=1):
     print("[*] Centroids reoriented from", nio.ornt2axcodes(ornt_fr), "to", axcodes_to)
     return out_list
 
+
+if __name__ == "__main__":
+    mode_all = ["train", "test","validation"] #    "train", "test",
+    for mode in mode_all:
+        base_path = "D:/Data/VerSe/VerSe19/verse19" + mode + "/"
+        ct_path = base_path + "raw_ct/rawdata/"
+        mask_path = base_path + "derivatives/"
+        json_path = base_path + "json/"
+        cts = os.listdir(ct_path)
+        cts.sort()
+        masks = os.listdir(mask_path)
+        masks.sort()
+        jsons = os.listdir(json_path)
+        jsons.sort()
+        for i,ct in enumerate(cts):
+            centroids = []
+            if(ct == ".DS_Store"):
+                continue
+            print(f'---------- {i} {ct} ----------')
+            # CT
+            ct_name = os.path.join(ct_path,ct)
+            ct_data = nib.load(ct_name)
+            ct_res = ct_resample(ct_data)
+            ct_reo = ct_reorient(ct_res)
+            # nib.Nifti1Image(img,img_affine).to_filename(‘xxxxx.nii.gz’)
+            nib.save(ct_reo, ct_name)
+            # Json
+            json_name = os.path.join(json_path,ct[:-7]+".json")
+            json_data = get_json(json_name)
+            json_res = centroids_rescale(json_data, ct_data)
+            json_reo = centroids_reorient(json_res, ct_reo)
+            centroids_save(json_reo, json_name)
+        print("mask transform start : ")
+        for mask in masks:
+            if(mask == ".DS_Store"):
+                continue
+            print(f'----------{mask} ----------')
+            mask_name = os.path.join(mask_path, mask)
+            mask = nib.load(mask_name)
+            mask_res = ct_resample(mask,(1,1,1),0)
+            mask_reo = ct_reorient(mask_res)
+            nib.save(mask_reo, mask_name)

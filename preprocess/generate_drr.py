@@ -74,4 +74,21 @@ def raw2nii_png(src, dst_nii, dst_png, H, W, phyH, phyW):
     spacingH, spacingW = phyH / H, phyW / W
     image.SetSpacing([spacingH, spacingW, 1])
     sitk.WriteImage(image, dst_nii)
+
+
+if __name__=="__main__":
+    mode_all = ["train"] #  
+    for mode in mode_all:
+        base_path = "D:/Data/VerSe/VerSe19/verse19" + mode + "/enhance_ct_8/"
+
+        air_ct_path = os.path.join(base_path, "ct")
+        air_ct_list = os.listdir(air_ct_path)
+        air_ct_list.sort()
+
+        for i,air_ct in enumerate(air_ct_list):
+            ct_path = os.path.join(air_ct_path, air_ct)
+            save_path = os.path.join(base_path,"enhance_drr","drr_"+air_ct[-9:-7]+"/")
+            os.makedirs(save_path, exist_ok=True)
+            plastimatch_drr(ct_path, save_path)
+            break
     
