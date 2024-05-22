@@ -153,7 +153,7 @@ if __name__=="__main__":
                 output_centroid = (matrix @ centroid_3d)
                 centroid_2d = (output_centroid/output_centroid[2]).T[0][:-1]
                 dis = centroid_2d - isocenter_2d
-                drr_coor = [768+dis[0], 768+dis[1]]
+                drr_coor = [512+dis[0], 512+dis[1]]
                 centroids_drr.append(drr_coor)
                 # print(f'drr_{p+1} vert_{j+1} coor is {drr_coor}, 2d coor is {centroid_2d}')
             centroids_drr_all.append(centroids_drr)
